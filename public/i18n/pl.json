@@ -1,0 +1,94 @@
+{
+  "app": {
+    "title": "Francuska Wyprawa"
+  },
+  "language": {
+    "en": "Angielski",
+    "pl": "Polski"
+  },
+  "nav": {
+    "back": "Wstecz",
+    "profile": "Profil",
+    "admin": "Admin"
+  },
+  "auth": {
+    "welcome": "Witaj w Francuskiej Wyprawie",
+    "login": "Zaloguj się",
+    "register": "Utwórz konto",
+    "email": "Email",
+    "password": "Hasło",
+    "logout": "Wyloguj",
+    "reset": "Nie pamiętasz hasła?",
+    "resetPrompt": "Podaj email, aby zresetować hasło:",
+    "resetSent": "Link resetujący wysłany (sprawdź konsolę serwera)."
+  },
+  "dashboard": {
+    "title": "Twoja tablica nauki",
+    "continuePrompt": "Wróć dokładnie do miejsca, w którym skończyłeś.",
+    "startPrompt": "Wybierz lekcję, aby rozpocząć naukę.",
+    "continue": "Kontynuuj naukę",
+    "review": "Przegląd błędów",
+    "reviewHint": "Skup się na elementach, które sprawiają trudność, w trybie powtórek.",
+    "reviewStart": "Rozpocznij powtórkę",
+    "xp": "XP",
+    "streak": "Seria",
+    "hearts": "Serca",
+    "dailyQuests": "Dzienne wyzwania",
+    "units": "Jednostki i lekcje",
+    "leaderboard": "Ranking"
+  },
+  "lesson": {
+    "start": "Start",
+    "hint": "Podpowiedź",
+    "audio": "Audio",
+    "report": "Zgłoś",
+    "prev": "Poprzednie",
+    "next": "Dalej",
+    "hearts": "Serca",
+    "typeAnswer": "Wpisz odpowiedź",
+    "submit": "Zatwierdź",
+    "listenPrompt": "Posłuchaj i wpisz to, co słyszysz.",
+    "noAudio": "Audio nie jest wspierane w tej przeglądarce.",
+    "noMic": "Rozpoznawanie mowy niedostępne.",
+    "startSpeaking": "Zacznij mówić",
+    "mistake": "Ups! Spróbuj ponownie.",
+    "hintText": "Pomyśl o szyku zdania, rodzaju i rodzajnikach.",
+    "reportText": "Dzięki! Zgłoszenie zapisane."
+  },
+  "profile": {
+    "title": "Profil i ustawienia",
+    "achievements": "Osiągnięcia"
+  },
+  "settings": {
+    "language": "Język interfejsu",
+    "dailyGoal": "Dzienne cele XP",
+    "save": "Zapisz ustawienia",
+    "reset": "Resetuj postępy",
+    "confirmReset": "Zresetować wszystkie postępy? Tego nie można cofnąć.",
+    "resetDone": "Postępy zresetowane."
+  },
+  "admin": {
+    "title": "Admin: edytor lekcji",
+    "lessonId": "ID lekcji (opcjonalnie do edycji)",
+    "unit": "Jednostka",
+    "level": "Poziom",
+    "titleFr": "Tytuł po francusku",
+    "titleEn": "Tytuł po angielsku",
+    "titlePl": "Tytuł po polsku",
+    "content": "JSON lekcji",
+    "save": "Zapisz lekcję",
+    "invalidJson": "Nieprawidłowy JSON",
+    "saved": "Lekcja zapisana"
+  },
+  "quests": {
+    "complete_lesson": "Ukończ lekcję",
+    "earn_xp": "Zdobądź XP",
+    "practice_mistakes": "Ćwicz błędy"
+  },
+  "achievements": {
+    "xp_100": "Osiągnij 100 XP",
+    "xp_500": "Osiągnij 500 XP",
+    "streak_3": "Utrzymaj 3-dniową serię",
+    "streak_7": "Utrzymaj 7-dniową serię"
+  }
+}

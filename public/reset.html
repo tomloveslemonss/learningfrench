@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="pageTitle"></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <section class="card">
+        <h1 data-i18n="auth.reset"></h1>
+        <form id="resetForm">
+          <label>
+            <span data-i18n="auth.password"></span>
+            <input type="password" name="password" required />
+          </label>
+          <button type="submit" class="primary" data-i18n="settings.save"></button>
+        </form>
+      </section>
+    </main>
+    <script src="/js/i18n.js" type="module"></script>
+    <script src="/js/api.js" type="module"></script>
+    <script type="module">
+      import { initCsrf, post } from './js/api.js';
+      import { loadTranslations } from './js/i18n.js';
+
+      async function init() {
+        await initCsrf();
+        await loadTranslations('en');
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token');
+        const form = document.getElementById('resetForm');
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          await post('/api/auth/reset', { token, newPassword: new FormData(form).get('password') });
+          window.location.href = '/';
+        });
+      }
+
+      init();
+    </script>
+  </body>
+</html>
