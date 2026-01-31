@@ -1,0 +1,94 @@
+{
+  "app": {
+    "title": "French Quest"
+  },
+  "language": {
+    "en": "English",
+    "pl": "Polish"
+  },
+  "nav": {
+    "back": "Back",
+    "profile": "Profile",
+    "admin": "Admin"
+  },
+  "auth": {
+    "welcome": "Welcome to French Quest",
+    "login": "Log in",
+    "register": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "logout": "Log out",
+    "reset": "Forgot password?",
+    "resetPrompt": "Enter your email to reset your password:",
+    "resetSent": "Reset link sent (check server console)."
+  },
+  "dashboard": {
+    "title": "Your learning dashboard",
+    "continuePrompt": "Pick up exactly where you left off.",
+    "startPrompt": "Choose a lesson to start your journey.",
+    "continue": "Continue learning",
+    "review": "Mistake review",
+    "reviewHint": "Focus on items you missed recently using spaced repetition.",
+    "reviewStart": "Start review",
+    "xp": "XP",
+    "streak": "Streak",
+    "hearts": "Hearts",
+    "dailyQuests": "Daily quests",
+    "units": "Units & lessons",
+    "leaderboard": "Leaderboard"
+  },
+  "lesson": {
+    "start": "Start",
+    "hint": "Hint",
+    "audio": "Audio",
+    "report": "Report",
+    "prev": "Previous",
+    "next": "Next",
+    "hearts": "Hearts",
+    "typeAnswer": "Type your answer",
+    "submit": "Submit",
+    "listenPrompt": "Listen and type what you hear.",
+    "noAudio": "Audio not supported in this browser.",
+    "noMic": "Speech recognition not available.",
+    "startSpeaking": "Start speaking",
+    "mistake": "Oops! Try again.",
+    "hintText": "Think about word order, gender, and articles.",
+    "reportText": "Thanks! We logged your report."
+  },
+  "profile": {
+    "title": "Profile & settings",
+    "achievements": "Achievements"
+  },
+  "settings": {
+    "language": "UI language",
+    "dailyGoal": "Daily XP goal",
+    "save": "Save settings",
+    "reset": "Reset progress",
+    "confirmReset": "Reset all progress? This cannot be undone.",
+    "resetDone": "Progress reset."
+  },
+  "admin": {
+    "title": "Admin: lesson editor",
+    "lessonId": "Lesson ID (optional for edit)",
+    "unit": "Unit",
+    "level": "Level",
+    "titleFr": "French title",
+    "titleEn": "English title",
+    "titlePl": "Polish title",
+    "content": "Lesson JSON",
+    "save": "Save lesson",
+    "invalidJson": "Invalid JSON",
+    "saved": "Lesson saved"
+  },
+  "quests": {
+    "complete_lesson": "Complete a lesson",
+    "earn_xp": "Earn XP",
+    "practice_mistakes": "Practice mistake review"
+  },
+  "achievements": {
+    "xp_100": "Reach 100 XP",
+    "xp_500": "Reach 500 XP",
+    "streak_3": "Maintain a 3-day streak",
+    "streak_7": "Maintain a 7-day streak"
+  }
+}

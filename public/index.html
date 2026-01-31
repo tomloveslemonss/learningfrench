@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="pageTitle"></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="logo">🇫🇷</span>
+          <span class="brand-name" data-i18n="app.title"></span>
+        </div>
+        <div class="topbar-actions">
+          <button id="profileBtn" class="ghost" data-i18n="nav.profile"></button>
+          <button id="adminBtn" class="ghost hidden" data-i18n="nav.admin"></button>
+          <select id="languageSelect" aria-label="" data-i18n-attr="aria-label:settings.language"></select>
+          <button id="logoutBtn" class="ghost" data-i18n="auth.logout"></button>
+        </div>
+      </header>
+
+      <main>
+        <section id="authSection" class="panel">
+          <h1 data-i18n="auth.welcome"></h1>
+          <div class="auth-grid">
+            <form id="loginForm" class="card">
+              <h2 data-i18n="auth.login"></h2>
+              <label>
+                <span data-i18n="auth.email"></span>
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                <span data-i18n="auth.password"></span>
+                <input type="password" name="password" required />
+              </label>
+              <button type="submit" class="primary" data-i18n="auth.login"></button>
+            </form>
+            <form id="registerForm" class="card">
+              <h2 data-i18n="auth.register"></h2>
+              <label>
+                <span data-i18n="auth.email"></span>
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                <span data-i18n="auth.password"></span>
+                <input type="password" name="password" required />
+              </label>
+              <label>
+                <span data-i18n="settings.language"></span>
+                <select name="uiLanguage">
+                  <option value="en" data-i18n="language.en"></option>
+                  <option value="pl" data-i18n="language.pl"></option>
+                </select>
+              </label>
+              <button type="submit" class="primary" data-i18n="auth.register"></button>
+              <button type="button" id="resetPasswordBtn" class="link" data-i18n="auth.reset"></button>
+            </form>
+          </div>
+        </section>
+
+        <section id="dashboardSection" class="panel hidden">
+          <div class="dashboard-header">
+            <div>
+              <h1 data-i18n="dashboard.title"></h1>
+              <p id="continueText"></p>
+              <button id="continueBtn" class="primary hidden" data-i18n="dashboard.continue"></button>
+            </div>
+            <div class="stats">
+              <div class="stat"><span data-i18n="dashboard.xp"></span><strong id="xpValue">0</strong></div>
+              <div class="stat"><span data-i18n="dashboard.streak"></span><strong id="streakValue">0</strong></div>
+              <div class="stat"><span data-i18n="dashboard.hearts"></span><strong id="heartsValue">0</strong></div>
+            </div>
+          </div>
+          <section class="card">
+            <h2 data-i18n="dashboard.dailyQuests"></h2>
+            <ul id="questList" class="list"></ul>
+          </section>
+          <section class="card">
+            <h2 data-i18n="dashboard.review"></h2>
+            <p data-i18n="dashboard.reviewHint"></p>
+            <button id="reviewBtn" class="primary" data-i18n="dashboard.reviewStart"></button>
+          </section>
+          <section class="card">
+            <h2 data-i18n="dashboard.units"></h2>
+            <div id="lessonList" class="lesson-list"></div>
+          </section>
+          <section class="card">
+            <h2 data-i18n="dashboard.leaderboard"></h2>
+            <ol id="leaderboardList" class="list"></ol>
+          </section>
+        </section>
+
+        <section id="lessonSection" class="panel hidden">
+          <div class="lesson-header">
+            <button id="backToDashboard" class="ghost" data-i18n="nav.back"></button>
+            <div class="lesson-progress">
+              <div class="progress-bar"><div id="progressFill"></div></div>
+              <div class="lesson-meta">
+                <span data-i18n="lesson.hearts"></span>: <span id="lessonHearts">5</span>
+              </div>
+            </div>
+          </div>
+          <div id="lessonContent" class="card"></div>
+          <div class="lesson-actions">
+            <button id="hintBtn" class="ghost" data-i18n="lesson.hint"></button>
+            <button id="audioBtn" class="ghost" data-i18n="lesson.audio"></button>
+            <button id="reportBtn" class="ghost" data-i18n="lesson.report"></button>
+          </div>
+          <div class="lesson-actions">
+            <button id="prevExercise" class="ghost" data-i18n="lesson.prev"></button>
+            <button id="nextExercise" class="primary" data-i18n="lesson.next"></button>
+          </div>
+        </section>
+
+        <section id="profileSection" class="panel hidden">
+          <div class="card">
+            <h2 data-i18n="profile.title"></h2>
+            <form id="settingsForm">
+              <label>
+                <span data-i18n="settings.language"></span>
+                <select name="uiLanguage" id="settingsLanguage"></select>
+              </label>
+              <label>
+                <span data-i18n="settings.dailyGoal"></span>
+                <input type="number" name="dailyGoal" min="5" max="200" />
+              </label>
+              <button type="submit" class="primary" data-i18n="settings.save"></button>
+            </form>
+            <div class="card">
+              <h3 data-i18n="profile.achievements"></h3>
+              <ul id="achievementList" class="list"></ul>
+            </div>
+            <button id="resetProgressBtn" class="danger" data-i18n="settings.reset"></button>
+          </div>
+        </section>
+
+        <section id="adminSection" class="panel hidden">
+          <div class="card">
+            <h2 data-i18n="admin.title"></h2>
+            <form id="adminLessonForm">
+              <label>
+                <span data-i18n="admin.lessonId"></span>
+                <input name="lessonId" />
+              </label>
+              <label>
+                <span data-i18n="admin.unit"></span>
+                <input name="unit" required />
+              </label>
+              <label>
+                <span data-i18n="admin.level"></span>
+                <input name="level" required />
+              </label>
+              <label>
+                <span data-i18n="admin.titleFr"></span>
+                <input name="titleFr" required />
+              </label>
+              <label>
+                <span data-i18n="admin.titleEn"></span>
+                <input name="titleEn" required />
+              </label>
+              <label>
+                <span data-i18n="admin.titlePl"></span>
+                <input name="titlePl" required />
+              </label>
+              <label>
+                <span data-i18n="admin.content"></span>
+                <textarea name="content" rows="8" required></textarea>
+              </label>
+              <button type="submit" class="primary" data-i18n="admin.save"></button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/i18n.js" type="module"></script>
+    <script src="/js/api.js" type="module"></script>
+    <script src="/js/auth.js" type="module"></script>
+    <script src="/js/lesson.js" type="module"></script>
+    <script src="/js/admin.js" type="module"></script>
+    <script src="/js/app.js" type="module"></script>
+  </body>
+</html>
